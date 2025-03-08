@@ -549,6 +549,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 import Footer from '../components/Footer';
+import logo from '../assets/logo.png';
 
 
 const videoSource = '/videos/QuickTrackbg.mp4';
@@ -578,7 +579,7 @@ const HeroSection = () => {
             <div className="overlay">
                 <h1 className="hero-title">Unlock Pitch Success with AI Ball Tracking.</h1>
                 <p className="hero-subtitle">
-                    QuickTrack.ai: Transforming Cricket with AI Ball Tracking & Umpire Tools. Analyze
+                    CrickTrack.ai: Transforming Cricket with AI Ball Tracking & Umpire Tools. Analyze
                     metrics, streamline officiating, and gain the winning edge.
                 </p>
 
@@ -688,21 +689,21 @@ const UseCasesSection = () => {
     const useCaseData = [
         {
             title: "Data-Driven Batting",
-            description: "Quicktrack.ai empowers batters to make informed decisions with actionable data on ball trajectory, speed, and spin. Elevate your game and dominate the scoreboard.",
+            description: "Cricktrack.ai empowers batters to make informed decisions with actionable data on ball trajectory, speed, and spin. Elevate your game and dominate the scoreboard.",
             image: "/images/cricket1.png",
             logo1: "/images/1.png",
             logo2: "/images/2.png"
         },
         {
             title: "Pinpoint Bowling Insights",
-            description: "Quicktrack.ai's advanced ball tracking visualizes the unseen, giving bowlers and analysts a powerful advantage in understanding and improving performance.",
+            description: "Cricktrack.ai's advanced ball tracking visualizes the unseen, giving bowlers and analysts a powerful advantage in understanding and improving performance.",
             image: "/images/cricket2.png",
             logo1: "/images/3.png",
             logo2: "/images/4.png"
         },
         {
             title: "Match Coverage Reimagined",
-            description: "From the ground to the screen, Quicktrack.ai transforms cricket broadcasts with visually stunning ball tracking and insightful data analysis. Enhance your coverage and captivate your audience.",
+            description: "From the ground to the screen, Cricktrack.ai transforms cricket broadcasts with visually stunning ball tracking and insightful data analysis. Enhance your coverage and captivate your audience.",
             image: "/images/cricket3.png",
             logo1: "/images/5.png",
             logo2: "/images/6.png"
@@ -742,8 +743,8 @@ const UseCasesSection = () => {
 
     return (
         <section className="use-cases-section">
-            <h2>The "QuickTrack.ai" You Know</h2>
-            <p>Quicktrack.ai makes cricket fairer, more engaging, and better officiated with cutting-edge ball tracking and umpire tools trusted by leagues and federations.</p>
+            <h2>The "CrickTrack.ai" You Know</h2>
+            <p>Cricktrack.ai makes cricket fairer, more engaging, and better officiated with cutting-edge ball tracking and umpire tools trusted by leagues and federations.</p>
             
             <div className="slider-container">
                 <button className="slider-button prev" onClick={prevSlide}>&lt;</button>
@@ -800,21 +801,21 @@ const TestimonialsSection = () => {
             name: " Rajesh Sharma",
             company: "Head Coach, Mumbai Cricket Academy",
             // image: "/images/client1.png",
-            review: "Quicktrack.ai has revolutionized how we coach batting. The pinpoint ball tracking allows us to identify even the smallest flaws in technique, leading to significant improvements in our players' scoring ability. A game-changer for modern cricket training!",
+            review: "Cricktrack.ai has revolutionized how we coach batting. The pinpoint ball tracking allows us to identify even the smallest flaws in technique, leading to significant improvements in our players' scoring ability. A game-changer for modern cricket training!",
             rating: 5
         },
         {
             name: "Priya Patel",
             company: "U19 Coach, Gujarat Cricket Association",
             // image: "/images/client2.png",
-            review: "As a coach of young bowlers, Quicktrack.ai's data has been invaluable. We can now visualize each delivery, analyze spin rates, and create targeted training plans that have dramatically increased our bowlers' accuracy and wicket-taking potential.",
+            review: "As a coach of young bowlers, Cricktrack.ai's data has been invaluable. We can now visualize each delivery, analyze spin rates, and create targeted training plans that have dramatically increased our bowlers' accuracy and wicket-taking potential.",
             rating: 4
         },
         {
             name: "Sunil Kumar",
             company: "Performance Analyst, Tamil Nadu Premier League",
             // image: "/images/client3.png",
-            review: "Quicktrack.ai has transformed our team's performance analysis. With the umpire tools, we can eliminate scoring inconsistencies, and the data-driven insights help us create winning strategies for every match. It's an indispensable asset for any cricket team looking to gain an edge.",
+            review: "Cricktrack.ai has transformed our team's performance analysis. With the umpire tools, we can eliminate scoring inconsistencies, and the data-driven insights help us create winning strategies for every match. It's an indispensable asset for any cricket team looking to gain an edge.",
             rating: 5
         }
     ];
@@ -822,7 +823,7 @@ const TestimonialsSection = () => {
     return (
         <section className="testimonials-section">
             <h2>Hear From Our Users</h2>
-            <p>Discover what our customers say about QuickTrack.ai</p>
+            <p>Discover what our customers say about CrickTrack.ai</p>
             
             <div className="testimonials-container">
                 {testimonials.map((testimonial, index) => (
@@ -870,7 +871,9 @@ function Home() {
         <div className="home-container">
             <header className="header">
                 <nav className="navbar">
-                    <div className="logo">QuickTrack.ai</div>
+                <div className="logo">
+                        <img src={logo} alt="CrickTrack.ai Logo" className="logo-image" />
+                    </div>
                     <div className="nav-links">
                         <Link to="/" className="nav-link">
                             Home
