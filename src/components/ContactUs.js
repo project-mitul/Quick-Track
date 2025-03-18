@@ -243,7 +243,7 @@ const ContactUs = () => {
       </div>
 
       <div className="contact-content">
-        <div className="contact-options">
+        {/* <div className="contact-options">
           <div className="contact-card phone">
             <div className="icon-container">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -274,7 +274,7 @@ const ContactUs = () => {
             <h3>E-Mail</h3>
             <p>mithulnathani111@gmail.com</p>
           </div>
-        </div>
+        </div> */}
 
         <div className="contact-sections">
           <div className="form-section">
