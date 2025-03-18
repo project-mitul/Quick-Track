@@ -25,9 +25,9 @@ const teamMembers = [
     }
   },
   {
-    name: "Jessica Walker",
-    role: "Database ",
-    image: "/images/jessica-walker.jpg", //Corrected path
+    name: "Harsh Lad",
+    role: "Database Management",
+    image: "/images/harsh.jpg", //Corrected path
     social: {
       instagram: "#",
       linkedin: "#"
