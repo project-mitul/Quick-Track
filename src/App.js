@@ -9,6 +9,7 @@ import TrackBall from './components/TrackBall';
 import Counter from './components/Counter';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
+import Pricing from './components/Pricing'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/counter" element={<Counter />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/pricing" element={<Pricing />} />
       </Routes>
     </Router>
   );

@@ -1,119 +1,217 @@
-/* General Container Styling */
-.about-us-container {
-    background-color: white;
-    min-height: 100vh;
-    padding: 50px 20px;
-    text-align: center;
-    color: #333;
-  }
-  
-  /* Header Section */
-  .about-us-header {
-    max-width: 700px;
-    margin: 0 auto 30px;
-  }
-  
-  .about-us-header h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  
-  .about-us-header p {
-    color: #666;
-    font-size: 1rem;
-    margin-top: 10px;
-  }
-  
-  /* Team Grid */
+/* AboutUs.css */
+
+/* Team Section Styling */
+.overflow{
+  overflow-x: hidden;
+}
+.team-section {
+  background-color: #000000;
+  color: #fff;
+  padding: 80px 20px;
+  width: 100%;
+}
+
+/* Team Header */
+.team-header {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.team-header h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.team-header p {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Team Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Team Card */
+.team-card {
+  background-color: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Member Image Container */
+.member-image-container {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.member-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.team-card:hover .member-image {
+  transform: scale(1.05);
+}
+
+/* Member Info */
+.member-info {
+  padding: 20px;
+  position: relative;
+}
+
+.member-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.member-role {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 16px;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #888;
+  background-color: #222;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #333;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
   .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .team-header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    padding: 0 20px;
   }
   
-  /* Individual Team Card */
-  .team-card {
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+  .member-image-container {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-header h2 {
+    font-size: 2rem;
   }
   
-  .team-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* Team Member Image */
-  .team-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-  
-  /* Team Info */
-  .team-info {
-    margin-left: 20px;
-    text-align: left;
-  }
-  
-  .team-info h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  
-  .role {
-    color: #666;
+  .team-header p {
     font-size: 1rem;
   }
   
-  .description {
-    color: #444;
-    font-size: 0.9rem;
-    margin-top: 5px;
-  }
-  
-  /* Social Icons */
-  .social-icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 10px;
-  }
-  
-  .icon {
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .icon:hover {
-    transform: translateY(-3px);
-  }
-  
-  .twitter {
-    color: #1da1f2;
-  }
-  
-  .linkedin {
-    color: #0077b5;
-  }
-  
-  .github {
-    color: #333;
-  }
-  
-  /* Separator */
-  .separator {
-    margin-top: 40px;
-  }
-  
-  .separator hr {
-    width: 50%;
-    border: 1px solid #ddd;
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
     margin: 0 auto;
   }
-  
+}
+
+
+/* Header */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+.logo-image {
+  height: 50px; 
+  margin-right: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.125rem; /* Slightly larger font size */
+  font-weight: 300;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+  position: relative; /* Required for underline animation */
+}
+
+.nav-link:hover {
+  color: #ddd;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Underline animation */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem; /* Distance from the text */
+  width: 0;
+  height: 0.125rem; /* Underline thickness */
+  background-color: #fff; /* Underline color */
+  transition: width 0.3s ease; /* Underline transition */
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Expand underline on hover */
+}

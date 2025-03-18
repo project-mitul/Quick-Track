@@ -1,63 +1,97 @@
-import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 import React from "react";
-import "./AboutUs.css"; // Import the external CSS file
+import "./AboutUs.css";
+import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import logo from '../assets/logo.png';
+import Footer from '../components/Footer';
 
 const teamMembers = [
   {
-    name: "Bonnie Green",
-    role: "CEO & Web Developer",
-    description: "Bonnie drives the technical strategy of the Flowbite platform and brand.",
-    image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png",
+    name: "Nathani Mitul",
+    role: "Front-end Developer",
+    image: "/images/mitul.jpg", // Corrected path (important!)
+    social: {
+      instagram: "#",
+      linkedin: "#"
+    }
   },
   {
-    name: "Jese Leos",
-    role: "CTO",
-    description: "Jese drives the technical strategy of the Flowbite platform and brand.",
-    image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png",
+    name: "gondaliya Jay",
+    role: "UX/UI Designer",
+    image: "/images/Jay.png",  // Corrected path
+    social: {
+      instagram: "#",
+      linkedin: "#"
+    }
   },
   {
-    name: "Michael Gough",
-    role: "Senior Front-end Developer",
-    description: "Michael drives the technical strategy of the Flowbite platform and brand.",
-    image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gough.png",
-  },
-  {
-    name: "Lana Byrd",
-    role: "Marketing & Sales",
-    description: "Lana drives the technical strategy of the Flowbite platform and brand.",
-    image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/lana-byrd.png",
-  },
+    name: "Jessica Walker",
+    role: "Database ",
+    image: "/images/jessica-walker.jpg", //Corrected path
+    social: {
+      instagram: "#",
+      linkedin: "#"
+    }
+  }
 ];
 
-const AboutUs = () => {
+const AboutUs = () => {  // Renamed to AboutUs for the page component
   return (
-    <div className="about-us-container">
-      <div className="about-us-header">
-        <h2>Meet Our Team</h2>
-        <p>We are a passionate team committed to innovation, excellence, and creating impactful solutions for a better future.</p>
-      </div>
+    <div className="overflow">
+        <header className="header">
+            <nav className="navbar">
+                <div className="logo">
+                    <img src={logo} alt="CrickTrack.ai Logo" className="logo-image" />
+                </div>
+                <div className="nav-links">
+                    <Link to="/" className="nav-link">
+                        Home
+                    </Link>
+                    <Link to="/about" className="nav-link">
+                        About
+                    </Link>
+                    <Link to="/contact" className="nav-link">
+                        Contact
+                    </Link>
+                    <Link to="/pricing" className="nav-link">
+                        Plan & Pricing
+                    </Link>
+                </div>
+            </nav>
+        </header>
 
-      <div className="team-grid">
-        {teamMembers.map((member, index) => (
-          <div key={index} className="team-card">
-            <img src={member.image} alt={member.name} className="team-image" />
-            <div className="team-info">
-              <h3>{member.name}</h3>
-              <p className="role">{member.role}</p>
-              <p className="description">{member.description}</p>
-              <div className="social-icons">
-                <FaTwitter className="icon twitter" />
-                <FaLinkedin className="icon linkedin" />
-                <FaGithub className="icon github" />
+      <div className="team-section">
+        <div className="team-header">
+          <h2>Meets our Team</h2>
+          <p>
+            Discover the passionate team of innovators, strategists, and customer success
+            professionals working tirelessly to help you achieve your goals
+          </p>
+        </div>
+
+        <div className="team-grid">
+          {teamMembers.map((member, index) => (
+            <div key={index} className="team-card">
+              <div className="member-image-container">
+                <img src={member.image} alt={member.name} className="member-image" />
+              </div>
+              <div className="member-info">
+                <h3>{member.name}</h3>
+                <p className="member-role">{member.role}</p>
+                <div className="social-links">
+                  <a href={member.social.instagram} className="social-icon">
+                    <FaInstagram />
+                  </a>
+                  <a href={member.social.linkedin} className="social-icon linkedin">
+                    <FaLinkedin />
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-
-      <div className="separator">
-        <hr />
-      </div>
+        <Footer />
     </div>
   );
 };
