@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './Dashboard';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import TrackBall from './components/TrackBall';
